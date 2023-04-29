@@ -28,7 +28,7 @@ namespace DecorLights
 
 			buildingDef.RequiresPowerInput = true;
 			buildingDef.EnergyConsumptionWhenActive = 2f;
-			buildingDef.SelfHeatKilowattsWhenActive = 0.25f;
+			buildingDef.SelfHeatKilowattsWhenActive = 0.0f;
 			buildingDef.ViewMode = OverlayModes.Light.ID;
 			buildingDef.AudioCategory = "Metal";
 

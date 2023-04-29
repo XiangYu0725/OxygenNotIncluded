@@ -41,9 +41,9 @@ namespace ConveyorRailUtilities.Filter
 			buildingDef.Entombable = false;
 			buildingDef.ViewMode = OverlayModes.SolidConveyor.ID;
 			buildingDef.RequiresPowerInput = true;
-			buildingDef.EnergyConsumptionWhenActive = 120f;
+			buildingDef.EnergyConsumptionWhenActive = 20f;
 			buildingDef.ExhaustKilowattsWhenActive = 0.0f;
-			buildingDef.SelfHeatKilowattsWhenActive = 2f;
+			buildingDef.SelfHeatKilowattsWhenActive = 0.0f;
 			buildingDef.AudioCategory = "Metal";
 			buildingDef.AudioSize = "small";
 			buildingDef.BaseTimeUntilRepair = -1f;

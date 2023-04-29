@@ -14,14 +14,10 @@ namespace DecorLights
 			public static void Prefix()
 			{
 				AddBuildingStrings(LavaLampConfig.Id, LavaLampConfig.DisplayName, LavaLampConfig.Description, LavaLampConfig.Effect);
-				AddBuildingStrings(SaltLampConfig.Id, SaltLampConfig.DisplayName, SaltLampConfig.Description, SaltLampConfig.Effect);
 				AddBuildingStrings(CeilingLampConfig.Id, CeilingLampConfig.DisplayName, CeilingLampConfig.Description, CeilingLampConfig.Effect);
-				AddBuildingStrings(LuminiferousSphereConfig.Id, LuminiferousSphereConfig.DisplayName, LuminiferousSphereConfig.Description, LuminiferousSphereConfig.Effect);
 
 				AddBuildingToPlanScreen(GameStrings.PlanMenuCategory.Furniture, LavaLampConfig.Id);
-				AddBuildingToPlanScreen(GameStrings.PlanMenuCategory.Furniture, SaltLampConfig.Id);
 				AddBuildingToPlanScreen(GameStrings.PlanMenuCategory.Furniture, CeilingLampConfig.Id);
-				AddBuildingToPlanScreen(GameStrings.PlanMenuCategory.Furniture, LuminiferousSphereConfig.Id);
 			}
 		}
 
@@ -32,9 +28,7 @@ namespace DecorLights
 			public static void Postfix()
 			{
 				AddBuildingToTechnology(GameStrings.Technology.Decor.GlassBlowing, LavaLampConfig.Id);
-				AddBuildingToTechnology(GameStrings.Technology.Decor.GlassBlowing, SaltLampConfig.Id);
 				AddBuildingToTechnology(GameStrings.Technology.Decor.GlassBlowing, CeilingLampConfig.Id);
-				AddBuildingToTechnology(GameStrings.Technology.Decor.GlassBlowing, LuminiferousSphereConfig.Id);
 			}
 		}
 	}

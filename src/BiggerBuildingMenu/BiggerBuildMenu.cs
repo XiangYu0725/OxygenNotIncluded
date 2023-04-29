@@ -1,11 +1,22 @@
-﻿using System.Collections.Generic;
+﻿using HarmonyLib;
+using KMod;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
-using HarmonyLib;
 
-namespace BiggerCameraZoomOut
+namespace BiggerBuildingMenu
 {
-	public static class BiggerCameraZoomOutPatches
+    public class BiggerBuildingMenuMod : UserMod2
+    {
+        [HarmonyPatch(typeof(PlanScreen))]
+        [HarmonyPatch("ConfigurePanelSize")]
+        public static void Prefix(PlanScreen __instance)
+        {
+            Traverse.Create(__instance).Field("buildGrid_maxRowsBeforeScroll").SetValue(8);
+        }
+    }
+
+	public class BiggerCameraZoomOutMod : UserMod2
 	{
 		private static readonly float _maxZoom = 200f;
 
@@ -60,7 +71,7 @@ namespace BiggerCameraZoomOut
 				for (var i = 1; i < codes.Count; i++)
 				{
 
-					if (codes[i].opcode == OpCodes.Ldc_R4 && (float) codes[i].operand == 50f)
+					if (codes[i].opcode == OpCodes.Ldc_R4 && (float)codes[i].operand == 50f)
 					{
 						codes[i].operand = 20f;
 						break;

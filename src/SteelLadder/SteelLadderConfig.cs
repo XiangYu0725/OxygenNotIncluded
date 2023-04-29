@@ -20,7 +20,7 @@ namespace SteelLadder
 				hitpoints: BUILDINGS.HITPOINTS.TIER2,
 				construction_time: BUILDINGS.CONSTRUCTION_TIME_SECONDS.TIER1,
 				construction_mass: BUILDINGS.CONSTRUCTION_MASS_KG.TIER1,
-				construction_materials: new[] { SimHashes.Steel.ToString() },
+				construction_materials: MATERIALS.REFINED_METALS,
 				melting_point: BUILDINGS.MELTING_POINT_KELVIN.TIER2,
 				build_location_rule: BuildLocationRule.Anywhere,
 				decor: DECOR.BONUS.TIER0,
